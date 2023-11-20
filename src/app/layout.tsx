@@ -19,9 +19,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <Header />
-      <body className={inter.className}>{children}</body>
-      <Footer />
+      <body className={inter.className}>
+        <div className="grid grid-rows-layout min-h-screen">
+          <Header />
+          {children}
+          <Footer />
+        </div>
+      </body>
     </html>
   );
 }
