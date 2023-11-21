@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="grid grid-rows-layout min-h-screen">
+        <div className="grid grid-rows-layout min-h-screen bg-orange-200 text-red-900">
           <Header />
           {children}
           <Footer />
