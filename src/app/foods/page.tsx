@@ -1,4 +1,10 @@
 import List from "@/components/List";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Favourite Food | Lee Mander",
+  description: "Lee Mander's favourite foods",
+};
 
 export default function Page() {
   return (

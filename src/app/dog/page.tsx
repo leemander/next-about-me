@@ -1,6 +1,13 @@
 import List from "@/components/List";
 import Link from "next/link";
 
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "My Dog | Lee Mander",
+  description: "All about Lee Mander's pet dog Grace.",
+};
+
 type filterQuery = { filter: string };
 
 export default function Page({ searchParams }: { searchParams: filterQuery }) {

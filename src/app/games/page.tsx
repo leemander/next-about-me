@@ -1,6 +1,10 @@
-import List from "@/components/List";
+import { Metadata } from "next";
 import Link from "next/link";
 
+export const metadata: Metadata = {
+  title: "Favourite Games | Lee Mander",
+  description: "Lee Mander's favourite video games",
+};
 export default function Page() {
   const games = [
     "Super Mario Galaxy",

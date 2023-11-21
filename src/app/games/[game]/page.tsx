@@ -1,14 +1,21 @@
 type gameParam = { params: { game: string } };
 
-export default function Page({ params }: gameParam) {
-  function renderTitle(string: string) {
-    const arr = string.split("%20");
-    return arr
-      .map((word) => word[0].toUpperCase() + word.slice(1))
-      .join(" ")
-      .replace("%3A", ":");
-  }
+function renderTitle(string: string) {
+  const arr = string.split("%20");
+  return arr
+    .map((word) => word[0].toUpperCase() + word.slice(1))
+    .join(" ")
+    .replace("%3A", ":");
+}
 
+export async function generateMetadata({ params }: gameParam) {
+  return {
+    title: renderTitle(params.game) + " | Lee Mander",
+    description: `All about ${renderTitle(params.game)}`,
+  };
+}
+
+export default function Page({ params }: gameParam) {
   return (
     <main className="py-5">
       <div className="container mx-auto h-full">
