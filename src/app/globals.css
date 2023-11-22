@@ -2,11 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  font-size: 1.2rem;
+}
+
 a {
   color: rgb(192 132 252);
   font-weight: 600;
 }
 
 .food__img {
+  aspect-ratio: 1;
+  border: 0.5em solid green;
   border-radius: 50%;
+  object-fit: cover;
+  width: 400px;
 }
