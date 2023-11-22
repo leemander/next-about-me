@@ -3,6 +3,8 @@ import Link from "next/link";
 
 import { Metadata } from "next";
 
+import styles from "./dog.module.css";
+
 export const metadata: Metadata = {
   title: "My Dog | Lee Mander",
   description: "All about Lee Mander's pet dog Grace.",
@@ -29,7 +31,7 @@ export default function Page({ searchParams }: { searchParams: filterQuery }) {
             <ul className=" bg-green-700 flex items-center text-center h-full px-8 py-4 w-full gap-2 w-full rounded-b-xl">
               <li className="w-full">
                 <Link
-                  className="p-4 bg-orange-400 w-full h-full block"
+                  className={styles.filter_button}
                   href={`/dog?filter=invert`}
                 >
                   Invert
@@ -37,7 +39,7 @@ export default function Page({ searchParams }: { searchParams: filterQuery }) {
               </li>
               <li className="w-full">
                 <Link
-                  className="p-4 bg-orange-400 w-full h-full block"
+                  className={styles.filter_button}
                   href={`/dog?filter=sepia`}
                 >
                   Sepia
@@ -45,17 +47,14 @@ export default function Page({ searchParams }: { searchParams: filterQuery }) {
               </li>
               <li className="w-full">
                 <Link
-                  className="p-4 bg-orange-400 w-full h-full block"
+                  className={styles.filter_button}
                   href={`/dog?filter=grayscale`}
                 >
                   Grayscale
                 </Link>
               </li>
               <li className="w-full">
-                <Link
-                  className="p-4 bg-orange-400 w-full h-full block"
-                  href={`/dog`}
-                >
+                <Link className={styles.filter_button} href={`/dog`}>
                   Remove Filter
                 </Link>
               </li>

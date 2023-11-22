@@ -1,0 +1,12 @@
+.filter_button {
+  background-color: orange;
+  border-radius: 0.25em;
+  display: block;
+  font-weight: 600;
+  padding: 1em;
+  width: 100%;
+}
+
+.filter_button:is(:focus-visible, :hover) {
+  scale: 0.95;
+}
