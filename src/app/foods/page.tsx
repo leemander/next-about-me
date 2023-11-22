@@ -1,5 +1,6 @@
 import List from "@/components/List";
 import type { Metadata } from "next";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Favourite Food | Lee Mander",
@@ -13,21 +14,27 @@ export default function Page() {
         <h2 className="text-2xl font-bold">My Favourite Food</h2>
         <List array={["Pizza", "Curry", "Noodles"]} />
         <h3 className="text-2xl font-semibold my-4">Gallery</h3>
-        <div className="flex gap-8">
-          <img
-            src="https://images.unsplash.com/photo-1605478371310-a9f1e96b4ff4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        <div className="flex justify-center gap-8">
+          <Image
+            src="/za.avif"
             alt="Pepperoni pizza"
             className="food__img"
+            height={400}
+            width={400}
           />
-          <img
-            src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?q=80&w=1936&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          <Image
+            src="/curry.avif"
             alt="Indian curry"
             className="food__img"
+            height={400}
+            width={400}
           />
-          <img
-            src="https://images.unsplash.com/photo-1577859714523-5f0b6c98ece7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          <Image
+            src="/noods.avif"
             alt="Beef noodles"
             className="food__img"
+            height={400}
+            width={400}
           />
         </div>
       </div>

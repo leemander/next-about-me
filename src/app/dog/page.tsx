@@ -11,6 +11,7 @@ export const metadata: Metadata = {
 };
 
 type filterQuery = { filter: string };
+import Image from "next/image";
 
 export default function Page({ searchParams }: { searchParams: filterQuery }) {
   const filter = searchParams.filter;
@@ -21,10 +22,12 @@ export default function Page({ searchParams }: { searchParams: filterQuery }) {
         <h2 className="text-2xl font-bold">My Dawg</h2>
         <div className="mx-auto w-1/2 grid my-4">
           <div className="bg-orange-400 w-full rounded-t-xl">
-            <img
+            <Image
               className={`${filter} w-80 h-80 object-cover rounded-full my-4 mx-auto`}
               src="/grace_bday.jpg"
               alt="Grace"
+              height={320}
+              width={320}
             />
           </div>
           <div>

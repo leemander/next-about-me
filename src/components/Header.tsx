@@ -7,7 +7,7 @@ export default function Header() {
         <h1 className="text-5xl tracking-wide	text-red-400 font-bold font-serif">
           About Me
         </h1>
-        <nav className="text-purple-400 font-semibold font-mono text-lg">
+        <nav className="text-purple-400 font-semibold font-mono text-xl">
           <ul className="flex gap-8">
             <li>
               <Link href="/">Home</Link>

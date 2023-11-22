@@ -1,3 +1,6 @@
+import Image from "next/image";
+import styles from "./game.module.css";
+
 type gameParam = { params: { game: string } };
 type queryParams = {
   searchParams: {
@@ -6,7 +9,6 @@ type queryParams = {
     review: string;
   };
 };
-import styles from "./game.module.css";
 
 function renderTitle(string: string) {
   const arr = string.split("%20");
@@ -34,10 +36,12 @@ export default function Page({
     <main className="py-5">
       <div className="container mx-auto h-full">
         <h2 className="text-2xl font-bold">{renderTitle(params.game)}</h2>
-        <img
+        <Image
           src={searchParams.imgUrl}
           alt={renderTitle(params.game)}
-          className={`${styles.game__img} game__img my-4`}
+          className={`${styles.game__img} my-4`}
+          height={500}
+          width={889}
         />
         <h3 className="text-xl font-semibold">Why it's great:</h3>
         <p className="my-2">{searchParams.review}</p>
