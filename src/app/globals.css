@@ -1,3 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+a {
+  color: rgb(192 132 252);
+  font-weight: 600;
+}
+
+.food__img {
+  border-radius: 50%;
+}

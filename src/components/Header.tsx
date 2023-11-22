@@ -2,11 +2,13 @@ import Link from "next/link";
 
 export default function Header() {
   return (
-    <header className="py-5 bg-green-900 text-white">
+    <header className="py-5 bg-green-900 text-white ">
       <div className="container mx-auto flex justify-between items-center">
-        <h1 className="text-4xl text-red-400 font-bold">About Me</h1>
-        <nav className="text-purple-400 font-semibold">
-          <ul className="flex gap-4">
+        <h1 className="text-5xl tracking-wide	text-red-400 font-bold font-serif">
+          About Me
+        </h1>
+        <nav className="text-purple-400 font-semibold font-mono text-lg">
+          <ul className="flex gap-8">
             <li>
               <Link href="/">Home</Link>
             </li>

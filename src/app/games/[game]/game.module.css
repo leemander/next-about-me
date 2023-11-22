@@ -1,0 +1,5 @@
+.game__img {
+  aspect-ratio: 16 / 9;
+  height: 500px;
+  object-fit: cover;
+}

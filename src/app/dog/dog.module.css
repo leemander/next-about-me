@@ -1,5 +1,6 @@
 .filter_button {
   background-color: orange;
+  color: darkred;
   border-radius: 0.25em;
   display: block;
   font-weight: 600;
