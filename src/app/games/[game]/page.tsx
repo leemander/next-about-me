@@ -1,5 +1,6 @@
 import Image from "next/image";
 import styles from "./game.module.css";
+import { merriweather } from "@/app/layout";
 
 type propsType = {
   params: { game: string };
@@ -29,7 +30,9 @@ export default function Page({ params, searchParams }: propsType) {
   return (
     <main className="py-5">
       <div className="container mx-auto h-full">
-        <h2 className="text-2xl font-bold">{renderTitle(params.game)}</h2>
+        <h2 className={`text-2xl ${merriweather.className}`}>
+          {renderTitle(params.game)}
+        </h2>
         <Image
           src={searchParams.imgUrl}
           alt={renderTitle(params.game)}
@@ -37,7 +40,7 @@ export default function Page({ params, searchParams }: propsType) {
           height={500}
           width={889}
         />
-        <h3 className="text-xl font-semibold">Why it's great:</h3>
+        <h3 className={`text-xl ${merriweather.className}`}>Why it's great:</h3>
         <p className="my-2">{searchParams.review}</p>
       </div>
     </main>

@@ -1,10 +1,12 @@
 import { Metadata } from "next";
 import Link from "next/link";
+import { merriweather } from "../layout";
 
 export const metadata: Metadata = {
   title: "Favourite Games | Lee Mander",
   description: "Lee Mander's favourite video games",
 };
+
 export default function Page() {
   const games = [
     {
@@ -41,7 +43,9 @@ export default function Page() {
   return (
     <main className="bg-orange-200 text-red-900 py-5">
       <div className="container mx-auto h-full">
-        <h2 className="text-2xl font-bold">My Favourite Video Games</h2>
+        <h2 className={`text-2xl ${merriweather.className}`}>
+          My Favourite Video Games
+        </h2>
         <ul className="grid gap-2 my-4">
           {games.map((game, index) => {
             return (

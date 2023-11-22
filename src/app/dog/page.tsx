@@ -12,6 +12,7 @@ export const metadata: Metadata = {
 
 type filterQuery = { filter: string };
 import Image from "next/image";
+import { merriweather } from "@/app/layout";
 
 export default function Page({ searchParams }: { searchParams: filterQuery }) {
   const filter = searchParams.filter;
@@ -19,8 +20,8 @@ export default function Page({ searchParams }: { searchParams: filterQuery }) {
   return (
     <main className="bg-orange-200 text-red-900 py-5">
       <div className="container mx-auto h-full">
-        <h2 className="text-2xl font-bold">My Dawg</h2>
-        <div className="mx-auto w-1/2 grid my-4">
+        <h2 className={`text-2xl ${merriweather.className}`}>My Dawg</h2>
+        <div className="mx-auto w-2/3 grid my-4">
           <div className="bg-orange-400 w-full rounded-t-xl">
             <Image
               className={`${filter} w-80 h-80 object-cover rounded-full my-4 mx-auto`}
@@ -68,7 +69,7 @@ export default function Page({ searchParams }: { searchParams: filterQuery }) {
           I have a pet dog called Grace. Grace is a German Shorthaired Pointer
           (GSP) and she is 3 and a half years old.
         </p>
-        <h3 className="text-xl font-semibold my-4">
+        <h3 className={`text-xl my-4 ${merriweather.className}`}>
           Grace's favourite things:
         </h3>
         <List
