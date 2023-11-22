@@ -1,8 +1,8 @@
 import Image from "next/image";
 import styles from "./game.module.css";
 
-type gameParam = { params: { game: string } };
-type queryParams = {
+type propsType = {
+  params: { game: string };
   searchParams: {
     title: string;
     imgUrl: string;
@@ -18,20 +18,14 @@ function renderTitle(string: string) {
     .replace("%3A", ":");
 }
 
-export async function generateMetadata({ params }: gameParam) {
+export async function generateMetadata({ params }: propsType) {
   return {
     title: renderTitle(params.game) + " | Lee Mander",
     description: `All about ${renderTitle(params.game)}`,
   };
 }
 
-export default function Page({
-  params,
-  searchParams,
-}: {
-  params: gameParam;
-  searchParams: queryParams;
-}) {
+export default function Page({ params, searchParams }: propsType) {
   return (
     <main className="py-5">
       <div className="container mx-auto h-full">
